@@ -5,7 +5,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com).
 
 ## [v1.0.0] - 2026-09-25
 
-## ✨ What's Changed in v1.0.0
+**✨ What's Changed in v1.0.0**
 
 ### ⚠️ Breaking Changes
 - initial stable public release of cutver-actions

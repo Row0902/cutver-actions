@@ -39,7 +39,8 @@ export class ReleaseOrchestrator {
         if (inputs.command === 'changelog' || inputs.command === 'release') {
             const changelog = new ChangelogCommand(this.runner, {
                 config: inputs.config,
-                notesFile: inputs.notesFile
+                notesFile: inputs.notesFile,
+                template: inputs.template
             });
             const notes = await changelog.execute();
             result.notesPath = inputs.notesFile;

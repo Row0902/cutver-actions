@@ -11,7 +11,18 @@ export class ChangelogCommand extends BaseCommand<string> {
 
     async execute(): Promise<string> {
         core.info('Extrayendo últimas notas de release (cutver changelog latest)...');
-        const notes = await this.runner.run(['changelog', 'latest']);
+
+        const args: string[] = ['changelog', 'latest'];
+
+        if (this.options.config) {
+            args.push('-c', this.options.config);
+        }
+
+        if (this.options.template) {
+            args.push('--template', this.options.template);
+        }
+
+        const notes = await this.runner.run(args);
 
         if (!notes) {
             core.warning('No se obtuvo texto de "cutver changelog latest".');

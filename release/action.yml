@@ -33,6 +33,9 @@ inputs:
     description: "File path to save the extracted release notes"
     required: false
     default: "RELEASE_NOTES.md"
+  template:
+    description: "Path to a MiniJinja template file to format release notes"
+    required: false
 
 outputs:
   notes-path:

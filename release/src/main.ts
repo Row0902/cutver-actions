@@ -15,7 +15,8 @@ async function run(): Promise<void> {
             dryRun: core.getBooleanInput('dry-run'),
             skipPreflight: skipSteps,
             checkChangelog: core.getBooleanInput('check-changelog'),
-            notesFile: core.getInput('notes-file') || 'RELEASE_NOTES.md'
+            notesFile: core.getInput('notes-file') || 'RELEASE_NOTES.md',
+            template: core.getInput('template') || undefined
         };
 
         const runner = new CutverRunner(inputs.config);

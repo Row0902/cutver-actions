@@ -17,6 +17,7 @@ export interface BumpOptions extends CommonCliOptions {
 
 export interface ChangelogOptions extends CommonCliOptions {
     notesFile: string;
+    template?: string | undefined;
 }
 
 export interface ActionInputs {
@@ -27,6 +28,7 @@ export interface ActionInputs {
     skipPreflight?: string[] | undefined;
     checkChangelog: boolean;
     notesFile: string;
+    template?: string | undefined;
 }
 
 export interface ICommand<T = void> {

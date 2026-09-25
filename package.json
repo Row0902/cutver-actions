@@ -1,0 +1,28 @@
+{
+  "name": "cutver-actions",
+  "version": "0.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/Row0902/cutver-actions",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "Row0902",
+    "email": "167712855+Row0902@users.noreply.github.com",
+    "url": "https://github.com/Row0902"
+  },
+  "scripts": {
+    "build:setup": "ncc build setup/src/main.ts -o setup/dist --minify",
+    "build:release": "ncc build release/src/main.ts -o release/dist --minify",
+    "build": "pnpm run build:setup && pnpm run build:release"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/exec": "^3.0.0",
+    "@actions/tool-cache": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@vercel/ncc": "^0.45.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -14,6 +14,7 @@ default_timeout = 300
 path = "CHANGELOG.md"
 format = "keep-a-changelog"
 mode = "conventional"
+template_file = ".github/templates/cutver/RELEASE.md"
 
 [git]
 tag_prefix = "v"
